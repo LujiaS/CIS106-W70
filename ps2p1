@@ -1,0 +1,7 @@
+#p1
+sticker = input('Enter stock sticker symbol')
+num = int(input('number of share'))
+cost = float(input('cost per share'))
+amount = num * cost
+print('Stock ticker symbol', sticker)
+print('Total amount', amount)

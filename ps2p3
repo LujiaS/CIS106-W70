@@ -1,0 +1,5 @@
+
+#p3
+pay = input('enter amount paid')
+split = pay / 3
+print('Amout each person received', split)

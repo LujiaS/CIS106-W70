@@ -1,0 +1,7 @@
+
+#p5
+r = input('enter radius')
+a = 3.147 * r * r
+p = 2 * 3.147 * r
+print('The area is', a)
+print('The perimeter is', p)

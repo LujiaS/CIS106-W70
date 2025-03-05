@@ -1,0 +1,14 @@
+
+#p4
+make = input('enter make amount')
+model = input('enter model')
+msrp_amount = input('enter msrp amt')
+discount = float(input('enter discount percent'))
+amt = msrp_amount * discount
+price = msrp_amount - amt
+print('The make', make)
+print('The model', model)
+print('The msrp amount', msrp_amount)
+print('The discounted percent', discount)
+print('The amount off', amt)
+print('The discounted price', price)
