@@ -1,4 +1,0 @@
-quantity = input("enter quantity")
-if quantity >= 1000:
-unit_price == 3
-if quantity 
