@@ -1,0 +1,14 @@
+principleamt = int(input('enter principle amt'))
+years = int(input('enter years to maturity'))
+if principleamt > 100000 and years == 5:
+    interest = 0.06
+elif principleamt > 50000 and principleamt < 100000 and years == 10:
+    interest =0.05
+elif principleamt > 50000 and principleamt < 100000 and years == 5:
+    interest =0.04
+else:
+    interest = 0.02
+interestamt = interest * principleamt
+print('The Principle amount is', principleamt)
+print('The Interest rate is', interest)
+print('The Interest amount for the first year is', interestamt)
