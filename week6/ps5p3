@@ -1,0 +1,16 @@
+student_count = 0
+total_students = 0
+
+while input("Do you want to continue? (Yes/No)").lower() == "Yes":
+    last_name = input("Enter last name")
+    exam1_score = float(input("Enter first exam score"))
+    exam2_score = float(input("Enter second exam score"))
+    
+    avg_score = (exam1_score + exam2_score) / 2
+    student_count += 1
+    
+    print(f"Student: {last_name}, Average Score: {avg_score:.2f}")
+    
+    total_students += avg_score
+    
+print(f"Total Students: {student_count}")

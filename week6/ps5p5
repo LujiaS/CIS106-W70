@@ -1,0 +1,20 @@
+total_discount = 0
+
+while input("Do you want to continue? (Yes/No)").lower() == "Yes":
+    quantity = int(input("Enter quantity"))
+    price = float(input("Enter price per item"))
+    
+    extended_price = quantity * price
+    
+    if extended_price > 10000:
+        discount_rate = 0.25
+    else:
+        discount_rate = 0.10
+    
+    discount_amount = extended_price * discount_rate
+    total_price = extended_price - discount_amount
+    total_discount += discount_amount
+    
+    print(f"Extended Price: {extended_price:.2f}, Discount: {discount_amount:.2f}, Total Price: {total_price:.2f}")
+    
+print(f"Total Discount: {total_discount:.2f}")
