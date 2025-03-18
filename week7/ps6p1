@@ -1,0 +1,7 @@
+p = float(input('enter principle'))
+r = float(input('enter interest rate'))
+for count in range (1,6,1):
+    i = p * r
+    eb = p + i
+    print(count, '', p, '', eb)
+    p = eb
