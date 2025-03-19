@@ -1,0 +1,19 @@
+def compute_square_footage(length, width, height):
+    floor_ceiling = 2 * length * width
+    walls = 2 * length * height + 2 * width * height
+    return floor_ceiling + walls
+
+def compute_gallons_needed(square_footage):
+    return square_footage / 50
+
+while True:
+    response = input("Do you want to do the program? (Yes or No): ").strip().lower()
+    if response == 'yes':
+        length = float(input("Enter room length: "))
+        width = float(input("Enter room width: "))
+        height = float(input("Enter room height: "))
+        square_footage = compute_square_footage(length, width, height)
+        gallons_needed = compute_gallons_needed(square_footage)
+        print(f"Gallons needed to paint the room: {gallons_needed:.2f} gallons")
+    else:
+        break
