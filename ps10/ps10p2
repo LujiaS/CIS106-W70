@@ -1,0 +1,11 @@
+def clean_and_reverse(text):
+    text = " ".join(text.split())  
+    return text[::-1]  
+
+def main():
+    user_input = input("Enter a line of text: ").strip()
+    result = clean_and_reverse(user_input)
+    print(f"Reversed text with cleaned spaces: {result}")
+
+if __name__ == "__main__":
+    main()

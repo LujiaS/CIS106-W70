@@ -1,0 +1,22 @@
+def scroll_text(text, num_chars, num_lines, direction):
+    extended_text = text * ((num_chars // len(text)) + 1)  
+    extended_text = extended_text[:num_chars]  
+
+    for i in range(num_lines):
+        if direction == 'left':
+            print(extended_text[i:] + extended_text[:i])
+        elif direction == 'right':
+            print(extended_text[-i:] + extended_text[:-i])
+        else:
+            print("Invalid direction.")
+
+def main():
+    text = input("Enter a line of text: ").strip()
+    num_chars = int(input("Enter number of characters per line: "))
+    num_lines = int(input("Enter number of lines to print: "))
+    direction = input("Enter scroll direction (left or right): ").strip().lower()
+
+    scroll_text(text, num_chars, num_lines, direction)
+
+if __name__ == "__main__":
+    main()

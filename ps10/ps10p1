@@ -1,0 +1,17 @@
+def format_name(name):
+    parts = name.split()
+    
+    if len(parts) != 2:
+        return "Invalid input. Please provide both first name and last name."
+    
+    first_name, last_name = parts
+    first_initial = first_name[0]
+    formatted_name = f"{last_name}, {first_initial}."
+    return formatted_name
+
+def main():
+    name = input("Enter your full name: ").strip()
+    print(format_name(name))
+
+if __name__ == "__main__":
+    main()

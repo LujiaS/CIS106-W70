@@ -1,0 +1,15 @@
+def parse_csv(input_line):
+    items = input_line.split(",")
+    cleaned_items = [item.strip() for item in items] 
+    return cleaned_items
+
+def main():
+    csv_line = input("Enter a line of comma-separated values: ").strip()
+    parsed_values = parse_csv(csv_line)
+    
+    print("Parsed values:")
+    for value in parsed_values:
+        print(value)
+
+if __name__ == "__main__":
+    main()
