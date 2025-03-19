@@ -1,0 +1,16 @@
+def compute_disc(qty, price, discrate):
+    extprice = qty * price
+    discamt = extprice * discrate
+    discprice = extprice - discamt
+    return discamt, discprice
+
+qty = int(input("Enter quantity: "))
+price = float(input("Enter price: "))
+discrate = float(input("Enter discount rate: "))
+
+discamt, discprice = compute_disc(qty, price, discrate)
+
+print("\nQuantity:", qty)
+print("Price:", price)
+print("Discount Amount:", discamt)
+print("Discounted Price:", discprice)

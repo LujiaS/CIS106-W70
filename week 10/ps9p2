@@ -1,0 +1,14 @@
+def compute_points(s1, s2, s3):
+    total = s1 + s2 + s3
+    avgscore = total / 3
+    return total, avgscore
+lname = input("Enter student's last name: ")
+s1 = int(input("Enter score for exam 1: "))
+s2 = int(input("Enter score for exam 2: "))
+s3 = int(input("Enter score for exam 3: "))
+
+total, avgscore = compute_points(s1, s2, s3)
+
+print("\nStudent:", lname)
+print("Total Points:", total)
+print("Average Score:", avgscore)
