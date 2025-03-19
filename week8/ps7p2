@@ -1,0 +1,18 @@
+def compute_batting_avg(hits, at_bats):
+    if at_bats == 0:
+        return 0
+    return hits / at_bats
+
+player_count = 0
+while True:
+    last_name = input("Enter player's last name: ")
+    hits = int(input(f"Enter the number of hits for {last_name}: "))
+    at_bats = int(input(f"Enter the number of at-bats for {last_name}: "))
+    avg = compute_batting_avg(hits, at_bats)
+    print(f"{last_name}'s Batting Average: {avg:.3f}")
+    player_count += 1
+    continue_program = input("Do you want to continue? (Yes or No): ").lower()
+    if continue_program != 'yes':
+        break
+
+print(f"Total number of players entered: {player_count}")
