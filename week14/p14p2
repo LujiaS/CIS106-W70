@@ -1,0 +1,67 @@
+class Car:
+    def __init__(self, make, model, sticker_price):
+        self.make = make
+        self.model = model
+        self.sticker_price = sticker_price
+        self.discount_price = sticker_price * 0.90  # 10% discount
+    
+    def price_with_discount(self):
+        return self.discount_price
+class Sport(Car):
+    def __init__(self, make, model, sticker_price):
+        super().__init__(make, model, sticker_price)
+        self.sport_wheels = 'N'
+        self.sport_engine = 'N'
+        self.sport_interior = 'N'
+    
+    def set_option(self, option, value):
+        if option == "SportWheels":
+            self.sport_wheels = value
+        elif option == "SportEngine":
+            self.sport_engine = value
+        elif option == "SportInterior":
+            self.sport_interior = value
+    
+    def price_with_options(self):
+        price = self.discount_price
+        if self.sport_wheels == 'Y':
+            price += 1000
+        if self.sport_engine == 'Y':
+            price += 3000
+        if self.sport_interior == 'Y':
+            price += 2000
+        return price
+class Luxury(Sport):
+    def __init__(self, make, model, sticker_price):
+        super().__init__(make, model, sticker_price)
+        self.gps = 'N'
+        self.self_driving = 'N'
+    
+    def set_option(self, option, value):
+        super().set_option(option, value)
+        if option == "GPS":
+            self.gps = value
+        elif option == "Self-Driving":
+            self.self_driving = value
+    
+    def price_with_options(self):
+        price = super().price_with_options()
+        if self.gps == 'Y':
+            price += 5000
+        if self.self_driving == 'Y':
+            price += 10000
+        return price
+car = Car("Toyota", "Corolla", 20000)
+print(f"Car price with discount: ${car.price_with_discount():.2f}")
+
+sport_car = Sport("Chevrolet", "Camaro", 30000)
+sport_car.set_option("SportWheels", "Y")
+sport_car.set_option("SportEngine", "Y")
+print(f"Sport car price with options: ${sport_car.price_with_options():.2f}")
+
+luxury_car = Luxury("Mercedes", "S-Class", 80000)
+luxury_car.set_option("SportWheels", "Y")
+luxury_car.set_option("SportEngine", "Y")
+luxury_car.set_option("GPS", "Y")
+luxury_car.set_option("Self-Driving", "Y")
+print(f"Luxury car price with options: ${luxury_car.price_with_options():.2f}")
