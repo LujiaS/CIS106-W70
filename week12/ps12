@@ -1,1 +1,52 @@
+num_items = int(input("Enter the number of items in the list: "))
+user_list = []
 
+for i in range(num_items):
+    num = int(input(f"Enter integer {i+1}: "))
+    user_list.append(num)
+
+print("List of numbers:", user_list)
+
+user_list.insert(1, 99)
+print("List after inserting 99 at position 1:", user_list)
+
+user_list[user_list.index(99)] = 100
+print("List after replacing 99 with 100:", user_list)
+
+second_list = [500, 600, 700, 800, 900]
+print("Second list:", second_list)
+
+user_list.extend(second_list)
+print("First list after extending with second list:", user_list)
+
+user_list.remove(800)
+print("List after removing 800:", user_list)
+
+del user_list[2]
+print("List after removing the third item:", user_list)
+
+grades = ["A", "B", "C", "A", "A", "C"]
+
+a_count = grades.count("A")
+print(f"Number of 'A' grades: {a_count}")
+
+b_index = grades.index("B")
+print(f"Index of first 'B' grade: {b_index}")
+
+if "F" not in grades:
+    print("F is not in the list.")
+
+second_list.clear()
+print("Second list after clearing:", second_list)
+
+players = ["Rizzo", "Davis", "Baez", "Happ", "Bryan"]
+
+players.sort()
+print("Sorted list of players:", players)
+
+players2 = players.copy()
+print("Copy of players list (players2):", players2)
+
+players2.reverse()
+print("Original players list:", players)
+print("Reversed players2 list:", players2)
