@@ -1,0 +1,10 @@
+def search_player(names, averages, last_name):
+    if last_name in names:
+        index = names.index(last_name)
+        print(f"{last_name}: {averages[index]}")
+    else:
+        print("Name not found")
+names = ['Smith', 'Johnson', 'Williams', 'Jones', 'Brown', 'Davis', 'Miller', 'Wilson', 'Moore', 'Taylor']
+averages = [0.267, 0.300, 0.295, 0.278, 0.310, 0.275, 0.280, 0.290, 0.300, 0.285]
+last_name = input("Enter player last name to search: ")
+search_player(names, averages, last_name)

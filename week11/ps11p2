@@ -1,0 +1,13 @@
+def display_names_and_scores(names, scores):
+    for i in range(len(names)):
+        print(names[i], "scored", scores[i])
+
+def display_names_and_scores_reverse(names, scores):
+    for i in range(len(names)-1, -1, -1):
+        print(names[i], "scored", scores[i])
+
+names = ['Smith', 'Johnson', 'Williams', 'Jones', 'Brown', 'Davis', 'Miller', 'Wilson', 'Moore', 'Taylor']
+scores = [85, 92, 88, 75, 90, 78, 84, 89, 91, 87]
+display_names_and_scores(names, scores)
+print("Reverse Order:")
+display_names_and_scores_reverse(names, scores)

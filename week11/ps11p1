@@ -1,0 +1,11 @@
+def display_names(names):
+    for name in names:
+        print(name)
+
+def display_names_reverse(names):
+    for name in reversed(names):
+        print(name)
+names = ['Smith', 'Johnson', 'Williams', 'Jones', 'Brown', 'Davis', 'Miller', 'Wilson', 'Moore', 'Taylor']
+display_names(names)
+print("Reverse Order:")
+display_names_reverse(names)
